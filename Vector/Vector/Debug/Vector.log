@@ -1,0 +1,9 @@
+﻿  main.cpp
+f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(8): warning C4326: return type of 'main' should be 'int' instead of 'void'
+f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(11): warning C4018: '<': signed/unsigned mismatch
+f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(18): warning C4018: '<': signed/unsigned mismatch
+f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(216): warning C4018: '<': signed/unsigned mismatch
+  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(214): note: while compiling class template member function 'void Vector<int>::resize(const int)'
+  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(16): note: see reference to function template instantiation 'void Vector<int>::resize(const int)' being compiled
+  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(9): note: see reference to class template instantiation 'Vector<int>' being compiled
+  Vector.vcxproj -> F:\Личное\_Becoming_Software_Developer\C++\Git\mySTL\Vector\Debug\Vector.exe
