@@ -13,22 +13,22 @@ public:
 	Vector(const int);
 	Vector(const Vector&);
 	Vector(int, V);
+
 	Vector<V>& operator=(const Vector&);
 	V& operator [](int);
-
-	V& at(int) const;
-	V& front() const;
-	V& back() const;
-	int capacity() const;
+	inline V& at(int) const;
+	inline V& front() const;
+	inline V& back() const;
+	inline int capacity() const;
 	void push_back(const V&);
-	bool empty() const;
-	int size() const;
-	void reserve(const int);
-	void resize(const int);
-	void resize(const int, const V&);
+	inline bool empty() const;
+	inline int size() const;
+	inline void reserve(const int);
+	inline void resize(const int);
+	inline void resize(const int, const V&);
+	inline void clear();
 
 	~Vector(void);
-
 };
 
 template <class V>
@@ -172,7 +172,7 @@ void Vector<V>::push_back(const V& newData)
 }
 
 template <class V>
-bool Vector<V>::empty() const
+inline bool Vector<V>::empty() const
 {
 	bool result;
 	if (this->Size == 0)
@@ -212,18 +212,63 @@ inline void Vector<V>::reserve(const int newCapacity)
 template<class V>
 inline void Vector<V>::resize(const int newSize)
 {
-	V* tempData = new V[Capacity];
-	for (size_t i = 0; i < newSize; i++)
+	if (this->Capacity < newSize)
 	{
-		tempData[i] = this->data[i];
+		this->Capacity = newSize;
+	}
+
+	V* tempData = new V[Capacity];
+	for (size_t i = 0; i < Capacity; i++)
+	{
+		if (i < this->Size)
+		{
+			tempData[i] = this->data[i];
+		}
+		else if (i >= Size)
+		{
+			tempData[i] = NULL;
+		}		
 	}
 	delete[] data;
+	this->Size = newSize;
 	this->data = tempData;
 }
 
 template<class V>
-inline void Vector<V>::resize(const int, const V&)
+inline void Vector<V>::resize(const int newSize, const V& newData)
 {
+	if (this->Capacity < newSize)
+	{
+		this->Capacity = newSize;
+	}
+
+	V* tempData = new V[Capacity];
+	for (size_t i = 0; i < Capacity; i++)
+	{
+		if (i < this->Size)
+		{
+			tempData[i] = this->data[i];
+		}
+		else if (i >= Size)
+		{
+			tempData[i] = newData;
+		}
+	}
+	delete[] data;
+	this->Size = newSize;
+	this->data = tempData;
+}
+
+template<class V>
+inline void Vector<V>::clear()
+{
+	if (data)
+	{
+		delete[] data;
+		this->Size = 0;
+		this->Capacity = 1;
+		data = new V[Capacity];
+	}
 }
 
 #endif VECTOR_H
