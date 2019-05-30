@@ -1,23 +1,19 @@
 ﻿  main.cpp
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(8): warning C4326: return type of 'main' should be 'int' instead of 'void'
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(13): warning C4018: '<': signed/unsigned mismatch
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(24): warning C4018: '<': signed/unsigned mismatch
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(34): warning C4018: '<': signed/unsigned mismatch
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(54): warning C4018: '<': signed/unsigned mismatch
-  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(43): note: while compiling class template member function 'Vector<int>::Vector(const int)'
-  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(9): note: see reference to function template instantiation 'Vector<int>::Vector(const int)' being compiled
-  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(9): note: see reference to class template instantiation 'Vector<int>' being compiled
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(246): warning C4018: '<': signed/unsigned mismatch
-  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(239): note: while compiling class template member function 'void Vector<int>::resize(const int,const V &)'
+e:\git\mystl\vector\vector\main.cpp(8): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+e:\git\mystl\vector\vector\main.cpp(13): warning C4018: <: несоответствие типов со знаком и без знака
+e:\git\mystl\vector\vector\main.cpp(24): warning C4018: <: несоответствие типов со знаком и без знака
+e:\git\mystl\vector\vector\main.cpp(34): warning C4018: <: несоответствие типов со знаком и без знака
+e:\git\mystl\vector\vector\vector.h(54): warning C4018: <: несоответствие типов со знаком и без знака
+  e:\git\mystl\vector\vector\vector.h(43): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  e:\git\mystl\vector\vector\main.cpp(9): note: выполняется компиляция ссылки на экземпляр шаблон функции "Vector<int>::Vector(const int)"
+  e:\git\mystl\vector\vector\main.cpp(9): note: выполняется компиляция ссылки на экземпляр шаблон класс "Vector<int>"
+e:\git\mystl\vector\vector\vector.h(232): warning C4018: <: несоответствие типов со знаком и без знака
+  e:\git\mystl\vector\vector\vector.h(225): note: при компиляции функции-члена "<Нет данных>" класса класс <Нет данных>
+  e:\git\mystl\vector\vector\main.cpp(19): note: выполняется компиляция ссылки на экземпляр шаблон функции "void Vector<int>::resize(const int,const V &)"
           with
           [
               V=int
           ]
-  f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\main.cpp(19): note: see reference to function template instantiation 'void Vector<int>::resize(const int,const V &)' being compiled
-          with
-          [
-              V=int
-          ]
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(248): warning C4018: '<': signed/unsigned mismatch
-f:\личное\_becoming_software_developer\c++\git\mystl\vector\vector\vector.h(252): warning C4018: '>=': signed/unsigned mismatch
-  Vector.vcxproj -> F:\Личное\_Becoming_Software_Developer\C++\Git\mySTL\Vector\Debug\Vector.exe
+e:\git\mystl\vector\vector\vector.h(234): warning C4018: <: несоответствие типов со знаком и без знака
+e:\git\mystl\vector\vector\vector.h(238): warning C4018: >=: несоответствие типов со знаком и без знака
+  Vector.vcxproj -> E:\GIT\mySTL\Vector\Debug\Vector.exe

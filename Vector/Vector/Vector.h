@@ -35,7 +35,7 @@ template <class V>
 Vector<V>::Vector()
 	: data(nullptr)
 	, Size(0)
-	, Capacity(1)
+	, Capacity(0)
 {}
 
 template <class V>
@@ -118,7 +118,11 @@ Vector<V>::~Vector(void)
 template <class V>
 inline V& Vector<V>::at(int index) const
 {
-	return data[index];
+	if (Size != 0)
+	{
+		return data[index];
+
+	}
 }
 
 template <class V>
@@ -128,10 +132,6 @@ inline V& Vector<V>::front() const
 	{
 		return data[0];
 	}
-	else
-	{
-		std::cout << "Vector is empty." << std::endl;
-	}
 }
 
 template <class V>
@@ -140,10 +140,6 @@ inline V& Vector<V>::back() const
 	if (Size != 0)
 	{
 		return data[Size - 1];
-	}
-	else
-	{
-		std::cout << "Vector is empty." << std::endl;
 	}
 }
 
@@ -174,17 +170,7 @@ void Vector<V>::push_back(const V& newData)
 template <class V>
 inline bool Vector<V>::empty() const
 {
-	bool result;
-	if (this->Size == 0)
-	{
-		result = true;
-	}
-	else if (this->Size != 0)
-	{
-		result = false;
-	}
-
-	return result;
+	return this->Size == 0;
 }
 
 template<class V>
@@ -220,7 +206,7 @@ inline void Vector<V>::resize(const int newSize)
 	V* tempData = new V[Capacity];
 	for (size_t i = 0; i < Capacity; i++)
 	{
-		if (i < this->Size)
+		if (i < Size)
 		{
 			tempData[i] = this->data[i];
 		}
@@ -245,7 +231,7 @@ inline void Vector<V>::resize(const int newSize, const V& newData)
 	V* tempData = new V[Capacity];
 	for (size_t i = 0; i < Capacity; i++)
 	{
-		if (i < this->Size)
+		if (i < Size)
 		{
 			tempData[i] = this->data[i];
 		}
@@ -266,7 +252,7 @@ inline void Vector<V>::clear()
 	{
 		delete[] data;
 		this->Size = 0;
-		this->Capacity = 1;
+		this->Capacity = 0;
 		data = new V[Capacity];
 	}
 }
